@@ -93,12 +93,12 @@ export default {
 				};
 				reqUserRegister(userInfo)
 					.then(response => {
-						console.log(response);
+						// console.log(response);
 						this.$refs.information.innerText = "*注册成功";
 						setTimeout(this.toLogin, 3000);
 					})
 					.catch(error => {
-						console.log(error);
+						// console.log(error);
 						if (error.response.data.number === 423) {
 							this.$refs.information.innerText = "*验证码没有发送";
 						} else {

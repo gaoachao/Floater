@@ -71,19 +71,19 @@ export default {
 				};
 				reqUserLogin(userInfo)
 					.then(response => {
-						console.log(response);
+						// console.log(response);
+
 						//将token存入localStorage
 						localStorage.setItem("Authorization", response.token);
 						//将当前user的邮箱存入localStorage
 						localStorage.setItem("email", response.user.email);
 						//将token存入vuex中
 						this.$store.dispatch('user/changeLogin', response.token);
-						// console.log(this.$store.state.user.Authorization);
 						this.$refs.information.innerText = "*登录成功";
 						setTimeout(this.toBeach, 1000);
 					})
 					.catch(error => {
-						console.log(error)
+						// console.log(error)
 						if (error.response.data.number === 423) {
 							this.$refs.information.innerText = "*该用户尚未注册";
 						} else {

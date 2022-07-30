@@ -65,12 +65,12 @@ export default {
 				};
 				reqForgetGetCode(emailData)
 					.then((response) => {
-						console.log(response);
+						// console.log(response);
 						this.$refs.information.innerText = '*发送成功'
 					})
 					.catch((error) => {
 						console.log(error);
-						console.log(error.response.data);
+						// console.log(error.response.data);
 						this.$refs.information.innerText = '*该用户尚未注册'
 					})
 			}

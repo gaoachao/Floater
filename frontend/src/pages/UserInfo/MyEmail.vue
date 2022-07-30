@@ -8,8 +8,14 @@
 			<div class="email">
 				<div class="now-email" ref="email"></div>
 			</div>
-			<div class="">
-
+		</div>
+		<div class="privacy-wrapper">
+			<div class="privacy-title">
+				已验证通过
+				<i class="fas fa-check"></i>
+			</div>
+			<div class="privacy">
+				您的邮箱仅被用于验证Huster的身份，本产品保证您的隐私安全。
 			</div>
 		</div>
 	</div>
@@ -32,7 +38,6 @@ export default {
 	mounted() {
 		const nowEmail = localStorage.getItem('email');
 		this.email = nowEmail;
-		console.log(this.email);
 		this.$refs.email.innerText = nowEmail;
 	}
 }
@@ -67,7 +72,7 @@ export default {
 
 	.email-wrapper {
 		width: 100%;
-		height: 100%;
+		height: 5vh;
 
 		.email {
 			margin-top: 3vh;
@@ -76,10 +81,30 @@ export default {
 			display: flex;
 			justify-content: center;
 			align-items: center;
+
 			.now-email {
 				font-size: 2.2vh;
-				color:#001945;
+				color: #2E3036;
 			}
+		}
+	}
+
+	.privacy-wrapper {
+		width: 100%;
+		margin-top: 2vh;
+		color: #2E3036;
+
+		.privacy-title {
+			height: 5vh;
+			font-size: 3vh;
+			text-align: center;
+		}
+
+		.privacy {
+			height: 8vh;
+			margin: 2vh 12vw 0 10vw;
+			font-size: 2.3vh;
+			text-align: center;
 		}
 	}
 }

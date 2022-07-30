@@ -1,5 +1,5 @@
 <template>
-	<div class="wrapper">
+	<div class="wrapper" ref="wrapper">
 		<div class="title-wrapper">
 			<div class="title-word">个人中心</div>
 		</div>
@@ -50,6 +50,18 @@
 				<i class="fas fa-user fa-2x" id="userInfo"></i>
 			</div>
 		</div>
+		<div class="alert" ref="alert">
+			<div class="title">确定退出登录吗？</div>
+			<div class="content">
+				<div class="word-wrapper" id="confirm" @click="confirm">
+					<div>确 定</div>
+				</div>
+				<div class="word-wrapper" id="cancel" @click="cancel">
+					<div>取 消</div>
+				</div>
+			</div>
+		</div>
+		<div class="gray-bg" ref="grayBg"></div>
 	</div>
 </template>
 <script>
@@ -71,23 +83,35 @@ export default {
 				name: 'Change',
 			})
 		},
-		toMyBottle(){
+		toMyBottle() {
 			this.$router.push({
 				name: 'MyBottle',
 			})
 		},
-		toAdvice(){
+		toAdvice() {
 			this.$router.push({
-				name:'Advice'
+				name: 'Advice'
 			})
 		},
-		toMyEmail(){
+		toMyEmail() {
 			this.$router.push({
-				name:'MyEmail'
+				name: 'MyEmail'
 			})
 		},
-		exit(){
-			// alert('确定要退出登录吗？');
+		exit() {
+			this.$refs.grayBg.classList.add('active');
+			this.$refs.alert.classList.add('active');
+		},
+		cancel(){
+			this.$refs.grayBg.classList.remove('active');
+			this.$refs.alert.classList.remove('active');
+		},
+		confirm(){
+			localStorage.removeItem('Authorization');
+			localStorage.removeItem('email');
+			this.$router.push({
+				name:'Entrance'
+			})
 		}
 	}
 }
@@ -173,6 +197,62 @@ export default {
 			font-size: 2.5vh;
 			color: #FCFCFF;
 		}
+	}
+
+	.alert {
+		position: absolute;
+		height: 26vh;
+		width: 80vw;
+		top: 32vh;
+		left: 10vw;
+		background-color: #F1F0F6;
+		border-radius: 3vh;
+		display: none;
+		z-index: 100;
+
+		.title {
+			margin-top: 3vh;
+			text-align: center;
+			font-size: 2.5vh;
+		}
+
+		.content {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+			.word-wrapper {
+				height: 5.5vh;
+				width: 80%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 3vh;
+				border-radius: 2.2vh;
+				background-color: #2E7DB2;
+				margin-top: 2.5vh;
+				color: #ffffff;
+			}
+
+			#confirm {
+				background-color: #894C5A;
+			}
+		}
+	}
+
+	.gray-bg {
+		display: none;
+		background-color: #3b3b3b77;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 93vh;
+		z-index: 10;
+	}
+
+	.active{
+		display: block !important;
 	}
 }
 

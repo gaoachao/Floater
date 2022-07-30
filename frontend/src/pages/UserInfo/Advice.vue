@@ -61,6 +61,7 @@ export default {
 					console.log(error);
 					this.$refs.information.innerText = '提交失败'
 				})
+			setTimeout(this.toUserInfo,1000);
 		}
 	}
 }

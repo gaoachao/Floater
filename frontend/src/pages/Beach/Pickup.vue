@@ -83,7 +83,8 @@ export default {
 					this.$refs.type.innerText = type;
 					switch (this.bottle.isMuseum) {
 						case 'true':
-							this.$refs.isMuseum.innerText = '在里面捏。';
+							// this.$refs.isMuseum.innerText = '在里面捏。';
+							this.$refs.isMuseum.innerHTML = '在里面捏'
 							break;
 						case 'false':
 							this.$refs.isMuseum.innerText = '不好意思，不在捏。';
@@ -143,6 +144,7 @@ export default {
 			line-height: 5vh;
 			width: 100%;
 			font-size: 2vh;
+
 		}
 
 		.share-wrapper {
