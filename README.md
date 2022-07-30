@@ -33,39 +33,42 @@ npm run dev
 
 ### 后端目录
 
+```
 |-- Floater
-    |-- .env								 				 //后端配置文件，端口+JWT的密钥
+    |-- .env								 		//后端配置文件，端口+JWT的密钥
     |-- .gitignore										
     |-- README.md
-    |-- floatEmail.js        			     		  //自已封装的nodemailer函数
+    |-- floatEmail.js        			            //自已封装的nodemailer函数
     |-- package-lock.json		
     |-- package.json
     |-- src
-        |-- app.js										  //入口文件
+        |-- app.js								    //入口文件
         |-- app
-        |   |-- index.js								  //同一管理koa实例app
+        |   |-- index.js							//同一管理koa实例app
         |-- config
-        |   |-- config.default.js				   //dotenv包的配置文件
+        |   |-- config.default.js				    //dotenv包的配置文件
         |-- controller
-        |   |-- bottle.controller.js			  //瓶子有关控制器
-        |   |-- user.controller.js			     //用户有关控制器
+        |   |-- bottle.controller.js			    //瓶子有关控制器
+        |   |-- user.controller.js			        //用户有关控制器
         |-- middleware
-        |   |-- auth.middleware.js   		   //Token认证中间件 
-        |   |-- authEmail.middleware.js	//发送认证邮件中间件
-        |   |-- isUser.middleware.js		   //判断当前用户是否注册中间件
-        |   |-- user.middleware.js			  //user有关中间件，包括密码加密加盐和输入合法性判断
+        |   |-- auth.middleware.js   		        //Token认证中间件 
+        |   |-- authEmail.middleware.js			    //发送认证邮件中间件
+        |   |-- isUser.middleware.js		        //判断当前用户是否注册中间件
+        |   |-- user.middleware.js			        //包括密码加密加盐和输入合法性判断
         |-- router
-        |   |-- bottle.route.js					   //瓶子相关路由
-        |   |-- index.js								  //路由器
-        |   |-- user.route.js						 //用户相关路由
-        |-- service										//service是数据库相关
-        |   |-- advice.service.js				  //用户提交的评价与建议数据库
-        |   |-- bottle.service.js				   //瓶子相关数据库
-        |   |-- user.service.js					  //用户相关数据库（用户信息和验证码）
-        |-- upload										//koa-body中设置的前端上传文件至服务器的存放路径
+        |   |-- bottle.route.js					    //瓶子相关路由
+        |   |-- index.js							//路由器
+        |   |-- user.route.js						//用户相关路由
+        |-- service									//service是数据库相关
+        |   |-- advice.service.js				    //用户提交的评价与建议数据库
+        |   |-- bottle.service.js				    //瓶子相关数据库
+        |   |-- user.service.js					    //用户相关数据库（用户信息和验证码）
+        |-- upload								    //前端上传文件至服务器的存放路径
+```
 
 ### 前端目录
 
+```
 |-- Floater
     |-- .gitignore
     |-- README.md
@@ -80,8 +83,8 @@ npm run dev
     |-- src
         |-- App.vue
         |-- main.js
-        |-- api											 //网络请求相关
-        |   |-- index.js								//请求集中管理
+        |-- api									    //网络请求相关
+        |   |-- index.js							//请求集中管理
         |   |-- request.js							//axios的二次封装
         |-- assets
         |   |-- font
@@ -90,33 +93,34 @@ npm run dev
         |       |-- beach.jpg
         |       |-- entrance.png
         |-- components	
-        |-- pages										//路由组件
-        |   |-- Beach								  //扔瓶子和捡瓶子的路由
+        |-- pages									//路由组件
+        |   |-- Beach								//扔瓶子和捡瓶子的路由
         |   |   |-- Beach.vue
         |   |   |-- Pickup.vue
         |   |   |-- Throw.vue
-        |   |-- Entrance							 //欢迎界面的路由
+        |   |-- Entrance							//欢迎界面的路由
         |   |   |-- Entrance.vue
-        |   |-- Forget								 //忘记密码界面的路由 
+        |   |-- Forget								//忘记密码界面的路由 
         |   |   |-- Forget.vue
-        |   |-- Login								  //登录界面的路由
+        |   |-- Login								//登录界面的路由
         |   |   |-- Login.vue
-        |   |-- Museum							//漂流瓶博物馆界面的路由
+        |   |-- Museum							    //漂流瓶博物馆界面的路由
         |   |   |-- Museum.vue
-        |   |-- Register							 //注册界面的路由 
+        |   |-- Register							//注册界面的路由 
         |   |   |-- Register.vue
         |   |-- UserInfo							//个人中心相关的路由
-        |       |-- Advice.vue					//评价与建议
-        |       |-- Change.vue				  //修改密码
-        |       |-- MyBottle.vue				//我的漂流瓶
-        |       |-- MyEmail.vue			     //我的邮箱及隐私承诺
-        |       |-- UserInfo.vue				 //个人中心界面
+        |       |-- Advice.vue					    //评价与建议
+        |       |-- Change.vue				        //修改密码
+        |       |-- MyBottle.vue				    //我的漂流瓶
+        |       |-- MyEmail.vue			            //我的邮箱及隐私承诺
+        |       |-- UserInfo.vue				    //个人中心界面
         |-- router
         |   |-- index.js
-        |-- store									  //项目不大，基本没用到的vuex
+        |-- store									//项目不大，基本没用到的vuex
             |-- index.js	
             |-- user.js
             |-- vux模板.js
+```
 
 ## 功能
 
