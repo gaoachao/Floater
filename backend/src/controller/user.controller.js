@@ -244,7 +244,6 @@ class UserController {
 			nowAdvice
 		}
 	}
-
 }
 
 module.exports = new UserController();

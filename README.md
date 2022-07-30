@@ -26,7 +26,7 @@ npm run dev
 
 ## 技术栈
 
-- **frontend** : Vue2 + vux + axios + Scss
+- **frontend** : Vue2 + vuex + axios + Scss
 - **backend** : Koa2 + MongoDB
 
 ## 项目目录
