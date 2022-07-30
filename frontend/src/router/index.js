@@ -11,6 +11,7 @@ import Museum from "../pages/Museum/Museum";
 import Change from "../pages/UserInfo/Change";
 import MyBottle from "../pages/UserInfo/MyBottle";
 import Advice from "../pages/UserInfo/Advice";
+import MyEmail from "../pages/UserInfo/MyEmail"
 
 const router = new VueRouter({
   mode: "history",
@@ -75,6 +76,11 @@ const router = new VueRouter({
 			path:"/Advice",
 			name:"Advice",
 			component:Advice
+		},
+		{
+			path:"/MyEmail",
+			name:"MyEmail",
+			component:MyEmail
 		}
   ],
 });

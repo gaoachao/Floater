@@ -49,4 +49,5 @@ router.post('/forgetPassword',crpytPassword,forgetPassword);
 // 用户评价及建议接口
 router.post('/advice',auth,advice);
 
+
 module.exports = router;

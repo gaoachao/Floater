@@ -7,8 +7,8 @@
 		<div class="img-wrapper">
 			<img class="img" src="../../assets/image/entrance.png">
 		</div>
-		<div class="button">
-			<div class="button-title" @click="toLogin">
+		<div class="button" @click="toLogin">
+			<div class="button-title" >
 				开始漂流
 			</div>
 		</div>

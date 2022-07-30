@@ -14,7 +14,7 @@
 					<i class="fas fa-angle-right" id="angle-right"></i>
 				</div>
 			</div>
-			<div class="my-email item">
+			<div class="my-email item" @click="toMyEmail">
 				<i class="fas fa-envelope"></i>
 				<div class="exclude-icon">
 					<div class="title">我的邮箱</div>
@@ -79,6 +79,11 @@ export default {
 		toAdvice(){
 			this.$router.push({
 				name:'Advice'
+			})
+		},
+		toMyEmail(){
+			this.$router.push({
+				name:'MyEmail'
 			})
 		},
 		exit(){
