@@ -2,7 +2,25 @@
 
 ## 介绍
 
+这是一款略显粗糙的产品，基于“漂流瓶”的idea，花了一周糊出来的，细节处理不够到位，UI不够精美，功能不够完善。但是也算是Bitter-Gourd的第一个正式的项目，所以想纪念一下。
 
+在开发的工程中想尝试实现邮箱认证的功能，于是基于`npm`包`nodemailer`实现了HUST校园邮箱认证，关于校园邮箱的认证仅在前端对输入的邮箱地址的校验中，去掉该校验即可实现支持所有邮箱格式。
+
+一开始的idea是想做分享图片、音频和视频，但是在UI布局上遇到一些小困难，于是只支持上传图片，事实上由于HTML5的`input[type=file]`标签，三者在前后端交互上本质相同。
+
+## 展示
+
+![entrance](https://github.com/gaoachao/Floater/raw/main/assets/1.png)
+
+![Beach](https://github.com/gaoachao/Floater/raw/main/assets/2.png)
+
+![Museum](https://github.com/gaoachao/Floater/raw/main/assets/3.png)
+
+![pick-up](https://github.com/gaoachao/Floater/raw/main/assets/4.png)
+
+![throw](https://github.com/gaoachao/Floater/raw/main/assets/5.png)
+
+![user-info](https://github.com/gaoachao/Floater/raw/main/assets/6.png)
 
 ## 开发者
 
@@ -15,7 +33,7 @@ npm i
 npm run serve
 ```
 
-## 后端
+### 后端
 
 ```
 //默认端口为8000
@@ -23,6 +41,12 @@ cd backend
 npm i
 npm run dev
 ```
+
+**注**：
+
+- 后端需要安装`mongodb`数据库，且数据库默认端口为27017。
+
+- 如果开发环境是`arch linux`可以执行`yay -S mongodb-bin`进行安装，以及`yay -S mongodb-compass`安装可视化工具。
 
 ## 技术栈
 
