@@ -10,17 +10,16 @@
 
 ## 展示
 
-![entrance](https://github.com/gaoachao/Floater/raw/main/assets/1.png)
+<div>
+    <img src="https://github.com/gaoachao/Floater/raw/main/assets/1.png" width=30%>
+    <img src="https://github.com/gaoachao/Floater/raw/main/assets/2.png" width=30%>
+    <img src="https://github.com/gaoachao/Floater/raw/main/assets/3.png" width=30%>
+    <img src="https://github.com/gaoachao/Floater/raw/main/assets/4.png" width=30%>
+    <img src="https://github.com/gaoachao/Floater/raw/main/assets/5.png" width=30%>
+    <img src="https://github.com/gaoachao/Floater/raw/main/assets/6.png" width=30%>
+</div>
 
-![Beach](https://github.com/gaoachao/Floater/raw/main/assets/2.png)
 
-![Museum](https://github.com/gaoachao/Floater/raw/main/assets/3.png)
-
-![pick-up](https://github.com/gaoachao/Floater/raw/main/assets/4.png)
-
-![throw](https://github.com/gaoachao/Floater/raw/main/assets/5.png)
-
-![user-info](https://github.com/gaoachao/Floater/raw/main/assets/6.png)
 
 ## 开发者
 
